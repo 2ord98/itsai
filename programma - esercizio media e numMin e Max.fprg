@@ -19,7 +19,7 @@
             <declare name="totaleNumeri" type="Integer" array="False" size=""/>
             <declare name="x" type="Boolean" array="False" size=""/>
             <declare name="mediaNumeri" type="Real" array="False" size=""/>
-            <assign variable="totaleNumeri" expression="0"/>
+            <assign variable="totaleNumeri" expression="1"/>
             <assign variable="numeroCicli" expression="0"/>
             <assign variable="numMin" expression="100^5"/>
             <assign variable="numMax" expression="0"/>
