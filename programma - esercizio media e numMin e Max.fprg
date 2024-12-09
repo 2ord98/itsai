@@ -1,0 +1,60 @@
+<?xml versione="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="esercizio media"/>
+        <attribute name="authors" value="ITS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-12-02 06:57:57 "/>
+        <attribute name="created" value="SVRTO0lUUy1QMjE7MjAyNC0xMS0yOTsiMDE6MTg6MTYgIjsxODk3"/>
+        <attribute name="edited" value="SVRTO0lUUy1QMjE7MjAyNC0xMS0yOTsiMDE6NTc6MjUgIjsxOzIwMDg="/>
+        <attribute name="edited" value="SFA7REVTS1RPUC0wQU02U0pOOzIwMjQtMTItMDI7IjA2OjU3OjU3ICI7MzsyNTIy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numMax" type="Integer" array="False" size=""/>
+            <declare name="numMin" type="Integer" array="False" size=""/>
+            <declare name="numeroCicli" type="Real" array="False" size=""/>
+            <declare name="numero" type="Integer" array="False" size=""/>
+            <declare name="totaleNumeri" type="Integer" array="False" size=""/>
+            <declare name="x" type="Boolean" array="False" size=""/>
+            <declare name="mediaNumeri" type="Real" array="False" size=""/>
+            <assign variable="totaleNumeri" expression="0"/>
+            <assign variable="numeroCicli" expression="0"/>
+            <assign variable="numMin" expression="100^5"/>
+            <assign variable="numMax" expression="0"/>
+            <output expression="&quot;hai un numero da scrivermi? se s&#236; scrivi 'true' altrimenti scrivi 'false' &quot;" newline="True"/>
+            <input variable="x"/>
+            <while expression="x = true">
+                <output expression="&quot;ok scrivimi il numero&quot;" newline="True"/>
+                <input variable="numero"/>
+                <output expression="&quot;hai un numero da scrivermi? se s&#236; scrivi 'true' altrimenti scrivi 'false' &quot;" newline="True"/>
+                <input variable="x"/>
+                <assign variable="totaleNumeri" expression="totaleNumeri+ numero"/>
+                <assign variable="numeroCicli" expression="numeroCicli +1"/>
+                <if expression="numero &gt;= numMax">
+                    <then>
+                        <assign variable="numMax" expression="numero"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="numero &lt;= numMin">
+                    <then>
+                        <assign variable="numMin" expression="numero"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+            <if expression="totaleNumeri = 0">
+                <then>
+                    <output expression="&quot; Va bene! Grazie e buona giornata &quot;" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="mediaNumeri" expression="totaleNumeri / numeroCicli"/>
+                    <output expression="&quot;il totale dei tuoi numero &#232; &quot; &amp;totaleNumeri &amp;&quot; e la media dei tuoi numeri &#232; &quot; &amp;mediaNumeri" newline="True"/>
+                    <output expression="&quot;Il tuo numero piu alto &#232; &quot; &amp;numMax &amp; &quot; e il tuo numero pi&#249; basso &#232; &quot; &amp; numMin" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
